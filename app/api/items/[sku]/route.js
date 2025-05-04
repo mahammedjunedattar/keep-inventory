@@ -2,7 +2,6 @@
 import { NextResponse } from 'next/server';
 import { connectToDB } from '@/app/lib/db';
 import { validateItem } from '@/app/models/item';
-import { withStoreAuth } from '@/app/middleware/withauth';
 
 export const DELETE = withStoreAuth(async (req) => {
   const { sku } = await params;  // ← await params
